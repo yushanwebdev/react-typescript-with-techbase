@@ -1,0 +1,5 @@
+{
+  "editor.defaultFormatter": "embertooling.prettier-for-handlebars-vscode",
+  "editor.formatOnSave": true,
+  "editor.bracketPairColorization.enabled": true
+}

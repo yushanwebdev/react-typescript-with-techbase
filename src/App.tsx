@@ -2,15 +2,17 @@ import { useState } from 'react';
 
 import './App.css';
 
+interface Address {
+  street: 'Main st.',
+  number: 88,
+  zip: '21345'
+}
+
 interface User {
   name: 'Mitchel',
     age: 23,
     country: 'the Netherlands',
-    address: {
-      street: 'Main st.',
-      number: 88,
-      zip: '21345'
-    },
+    address: Address,
     admin: false
 }
 

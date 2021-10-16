@@ -6,7 +6,7 @@ interface AppProps {
   extraText?: string;
 }
 
-function App({ headerText, extraText }: AppProps) {
+function App({ headerText, extraText = 'default text' }: AppProps) {
   return (
     <div className="App">
       <header className="App-header">

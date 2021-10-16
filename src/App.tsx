@@ -1,18 +1,15 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+
 import './App.css';
 
-interface AppProps {
-  headerText: string;
-  extraText?: string;
-}
+function App() {
+  const [user, setUser] = useState("Yushan");
+  // Here `user` type shows as 'string' beacuse of TypeScript`s Type Inference feature.
 
-function App({ headerText, extraText = 'default text' }: AppProps) {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>{headerText}</h1>
-        <p>{extraText}</p>
+        <p>{user}</p>        
       </header>
     </div>
   );

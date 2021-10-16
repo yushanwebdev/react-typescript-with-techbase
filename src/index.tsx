@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App headerText="This is the Header" />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

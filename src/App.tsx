@@ -2,14 +2,38 @@ import { useState } from 'react';
 
 import './App.css';
 
+interface User {
+  name: 'Mitchel',
+    age: 23,
+    country: 'the Netherlands',
+    address: {
+      street: 'Main st.',
+      number: 88,
+      zip: '21345'
+    },
+    admin: false
+}
+
 function App() {
-  const [user, setUser] = useState("Yushan");
-  // Here `user` type shows as 'string' beacuse of TypeScript`s Type Inference feature.
+  const [user, setUser] = useState<User | null>(null);
+
+  const fetchUser = () => setUser({
+    name: 'Mitchel',
+    age: 23,
+    country: 'the Netherlands',
+    address: {
+      street: 'Main st.',
+      number: 88,
+      zip: '21345'
+    },
+    admin: false
+  });
 
   return (
     <div className="App">
       <header className="App-header">
-        <p>{user}</p>        
+        <button onClick={fetchUser}>Fetch user on click</button>
+        {user && <p>{`Welcome to ${user.name}`}</p>}        
       </header>
     </div>
   );

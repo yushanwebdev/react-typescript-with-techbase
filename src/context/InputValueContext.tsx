@@ -13,7 +13,7 @@ const initialState = {
   inputValue: 0,
 };
 
-const reducer = (state, action) => {
+const reducer = (state: AppState, action: Action) => {
   const { type, payload } = action;
 
   switch (type) {

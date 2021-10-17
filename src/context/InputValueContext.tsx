@@ -5,6 +5,10 @@ type Action =
   | { type: "SET_INPUT_VALUE"; payload: number }
   | { type: "SET_INPUT_VALUE_TO_100" };
 
+interface InputProviderProps {
+  children: React.ReactNode;
+}
+
 const initialState = {
   inputValue: 0,
 };

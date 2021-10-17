@@ -38,12 +38,12 @@ const InputValueContext = createContext<{
   dispatch: () => {},
 });
 
-function InputValueProvider(props) {
+function InputValueProvider({ children }: InputProviderProps) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <InputValueContext.Provider value={{ state, dispatch }}>
-      {props.children}
+      {children}
     </InputValueContext.Provider>
   );
 }

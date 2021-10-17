@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import React, { createContext, useReducer } from "react";
 
 type AppState = typeof initialState;
 type Action =
@@ -30,7 +30,13 @@ const reducer = (state: AppState, action: Action) => {
   }
 };
 
-const InputValueContext = createContext(initialState);
+const InputValueContext = createContext<{
+  state: AppState;
+  dispatch: React.Dispatch<Action>;
+}>({
+  state: initialState,
+  dispatch: () => {},
+});
 
 function InputValueProvider(props) {
   const [state, dispatch] = useReducer(reducer, initialState);

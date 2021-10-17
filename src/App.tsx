@@ -4,8 +4,10 @@ import { useState } from "react";
 // Shipping
 // Payment
 
+type CheckoutStep = "Details" | "Shipping" | "Payment";
+
 export default function App() {
-  const [checkoutStep, setCheckoutStep] = useState("Details");
+  const [checkoutStep, setCheckoutStep] = useState<CheckoutStep>("Details");
 
   return (
     <>

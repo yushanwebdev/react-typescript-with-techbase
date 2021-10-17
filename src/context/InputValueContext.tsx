@@ -1,5 +1,10 @@
 import { createContext, useReducer } from "react";
 
+type AppState = typeof initialState;
+type Action =
+  | { type: "SET_INPUT_VALUE"; payload: number }
+  | { type: "SET_INPUT_VALUE_TO_100" };
+
 const initialState = {
   inputValue: 0,
 };

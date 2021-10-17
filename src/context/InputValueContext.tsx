@@ -14,13 +14,11 @@ const initialState = {
 };
 
 const reducer = (state: AppState, action: Action) => {
-  const { type, payload } = action;
-
-  switch (type) {
+  switch (action.type) {
     case "SET_INPUT_VALUE":
       return {
         ...state,
-        inputValue: payload,
+        inputValue: action.payload,
       };
     case "SET_INPUT_VALUE_TO_100":
       return {
